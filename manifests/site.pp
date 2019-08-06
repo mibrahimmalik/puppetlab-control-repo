@@ -31,4 +31,5 @@ node default {
    class { 'nginx': }
    include httpd
    class {'mystuff': }
+   class {'notepadplusplus': }
 }
