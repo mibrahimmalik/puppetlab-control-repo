@@ -5,5 +5,7 @@
 # @example
 #   include nginx
 class nginx {
+if $osfamily == 'redhat'{
   contain nginx::install
+}
 }
