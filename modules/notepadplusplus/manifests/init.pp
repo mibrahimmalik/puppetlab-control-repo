@@ -44,7 +44,7 @@ if $osfamily == 'windows'{
   package { $package:
     ensure          => installed,
     source          => 'c:\packages\npp.6.6.7.Installer.exe',
-    install_options => ['/VERYSILENT','/SUPPRESSMSGBOXES','/LOG'],
+    install_options => ['/S'],
   }
 
   if $::architecture == 'x64' {
