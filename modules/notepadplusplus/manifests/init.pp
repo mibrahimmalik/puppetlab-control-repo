@@ -36,11 +36,6 @@ if $osfamily == 'windows'{
     $notepadplusplus_installer_path = $file_path
   } else {
     $notepadplusplus_installer_path = "${::temp}\\${package}.exe"
-    windows_common::remote_file{'NotePad++':
-      source      => $url,
-      destination => $notepadplusplus_installer_path,
-      before      => Package[$package],
-    }
   }
   package { $package:
     ensure          => installed,
