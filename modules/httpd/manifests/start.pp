@@ -7,6 +7,7 @@
 #class httpd::start {
 #}
 class httpd::start inherits httpd{
+if $osfamily == 'redhat'{
  service { 'httpd':
  ensure     => running,
  enable     => true,
@@ -15,3 +16,4 @@ class httpd::start inherits httpd{
  require => Package['httpd'],
  }
  }
+}

@@ -9,7 +9,9 @@
 
 # == Class: httpd::install
 class httpd::install inherits httpd {
-package { 'httpd':
-ensure => installed,
+if $osfamily == 'redhat'{
+  package { 'httpd':
+  ensure => installed,
+  }
 }
 }

@@ -7,10 +7,12 @@
 #class httpd::configure {
 #}
 class httpd::configure inherits httpd{
+if $osfamily == 'redhat'{
         file { '/etc/httpd/conf/httpd.conf':
                 ensure => file,
                 owner => 'root',
                 group => 'root',
                 mode => '0644',
         }
+}
 }
