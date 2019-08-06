@@ -1,6 +1,6 @@
 class mystuff::vim {
 if $osfamily == 'redhat'{
-  pacakge {'vim':
+  package {'vim':
 		 ensure => 'latest'
         }
 }
