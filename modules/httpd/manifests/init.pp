@@ -1,5 +1,7 @@
 class httpd {
-include httpd::install
-include httpd::configure
-include httpd::start
+if $osfamily == 'windows'{
+  include httpd::install
+  include httpd::configure
+  include httpd::start
+}
 }
