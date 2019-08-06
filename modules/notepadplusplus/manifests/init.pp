@@ -35,7 +35,7 @@ if $osfamily == 'windows'{
   if $file_path {
     $notepadplusplus_installer_path = $file_path
   } else {
-    $notepadplusplus_installer_path = "${::temp}\\${package}.exe"
+    $notepadplusplus_installer_path = $url
   }
   package { $package:
     ensure          => installed,
