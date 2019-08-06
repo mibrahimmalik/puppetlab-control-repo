@@ -32,14 +32,18 @@ class notepadplusplus (
 ) inherits notepadplusplus::params {
 if $osfamily == 'windows'{
 
-  if $file_path {
-    $notepadplusplus_installer_path = $file_path
-  } else {
-    $notepadplusplus_installer_path = $url
+  file { 'c:\packages':
+        ensure => directory,
   }
+
+  file { 'c:\packages\npp.6.6.7.Installer.exe':
+        ensure => present,
+        source => $url
+  }
+
   package { $package:
     ensure          => installed,
-    source          => $notepadplusplus_installer_path,
+    source          => 'c:\packages\npp.6.6.7.Installer.exe',
     install_options => ['/VERYSILENT','/SUPPRESSMSGBOXES','/LOG'],
   }
 
