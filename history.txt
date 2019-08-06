@@ -1,0 +1,665 @@
+    1  cat /etc/resolv.conf 
+    2  vi /etc/resolv.conf 
+    3  ping www.yahoo.com
+    4  vi /etc/resolv.conf 
+    5  ping www.yahoo.com
+    6  ip ad
+    7  ping www.yahoo.com
+    8  cat /etc/resolv.conf 
+    9  vi /etc/sysconfig/network-scripts/ifcfg-ens160 
+   10  service network restart
+   11  ip ad
+   12  systemctl disable firewalld
+   13  systemctl stop firewalld
+   14  systemctl status firewalld
+   15  ls
+   16  tar -xvf puppet-enterprise-2019.1.0-el-7-x86_64.tar.gz 
+   17  ls
+   18  cd puppet-enterprise-2019.1.0-el-7-x86_64/
+   19  ./puppet-enterprise-installer 
+   20  puppet cert list
+   21  puppetserver ca list
+   22  puppet cert list
+   23  puppet
+   24  puppet help
+   25  puppet enterprise help
+   26  puppet
+   27  man puppet-enterprise
+   28  puppet help
+   29  puppet cert
+   30  puppet cert list
+   31  puppet cert ?
+   32  puppet cert help
+   33  puppet list cert
+   34  puppet cert list --all
+   35  puppetserver ca list --all
+   36  puppetserver
+   37  puppet ca cert list
+   38  puppet cert 
+   39  puppet ca list 
+   40  cd /
+   41  puppet list cert
+   42  puppet cert list
+   43  sudo puppet cert list --all
+   44  puppet cert list --all
+   45  puppet-cert
+   46  exit
+   47  service pe-puppetdb restart
+   48  cat  /etc/puppetlabs/puppetdb
+   49  cat /etc/puppetlabs/puppetdb/conf.d/config.ini 
+   50  cat /etc/puppetlabs/puppetdb/conf.d/read_database.ini 
+   51  cat /var/log/puppetlabs/installer/installer.log 
+   52  vi /etc/yum.conf 
+   53  yum repolist
+   54  cat /var/log/puppetlabs/installer/installer.log 
+   55  cat /var/log/puppetlabs/installer/2019-07-26T10.21.47+0100.install.log
+   56  cat /etc/resolv.conf 
+   57  cat /var/log/puppetlabs/installer/2019-07-26T10.21.47+0
+   58  cat /var/log/puppetlabs/installer/installer.log 
+   59  cat /var/log/puppetlabs/installer/2019-07-26T10.21.472019-07-26T10.21.47+0100.install.log
+   60  puppetserver
+   61  puppetserver ca list
+   62  puppetserver ca list -all
+   63  puppetserver ca list --all
+   64  puppetserver ca list --help
+   65  puppetserver 
+   66  puppetserver ca list --all
+   67  puppetserver ca clean --certname labdc01.uk.centricaplc.com
+   68  puppetserver ca list --all
+   69  puppetserver ca clean --certname labdc01.uk.centricaplc.com
+   70  git
+   71  yum install git
+   72  git remote -v
+   73  yum install wget
+   74  ls
+   75  mkdir repos
+   76  cd repos/
+   77  wget https://github.com/puppetlabs/control-repo/archive/production.zip
+   78  yum install unzip
+   79  ls
+   80  cd repos/
+   81  ls
+   82  unzip production.zip 
+   83  ls
+   84  cd control-repo-production/
+   85  ls
+   86  git init
+   87  git add .
+   88  git commit -am
+   89  git commit -a "first comit of control repo"
+   90  git commit "first comit of control repo"
+   91  git commit
+   92  git remote add origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+   93  git push master
+   94  git push origin master
+   95  cd /etc/puppetlabs/puppetserver/
+   96  ls
+   97  cd ssh/
+   98  dir
+   99  ssh-keygen -t rsa -b4096 -C "mibrahimmalik@gmail.com"
+  100  ls
+  101  cd ..
+  102  chown -R pe-puppet:pe-puppet ssh/
+  103  cd ssh/
+  104  ls
+  105  ls -lrt
+  106  cat id_rsa.pub 
+  107  pwd
+  108  puppet agent -t
+  109  r10k deploy display --fetch
+  110  puppet-access login --service-url https://puppetmaster.uk.centricaplc.com:4433/rbac-api --lifetime 365
+  111  cd /etc/puppetlabs/code/environments/
+  112  ls
+  113  mv production/ /root/prod
+  114  ls
+  115  r10k deploy display --fetch
+  116  puppet-code deploy production --wait
+  117  ls
+  118  cd production/
+  119  ls
+  120  cd site-modules/
+  121  ls
+  122  ls profile/
+  123  ls
+  124  cd ..
+  125  ls
+  126  cat Puppetfile 
+  127  git branch
+  128  r10k deploy display --fetch
+  129  git status
+  130  git show
+  131  git 
+  132  git branch
+  133  history
+  134  pwd
+  135  cd /root/
+  136  ls
+  137  cd repos/
+  138  ls
+  139  cd control-repo-production/
+  140  ls
+  141  git branch production
+  142  git checkout production
+  143  ls /etc/puppetlabs/code/environments/production/
+  144  cd /etc/puppetlabs/code/environments/production/
+  145  ls
+  146  cat Puppetfile 
+  147  puppet branch
+  148  git branch
+  149  git branch production
+  150  git checkout production
+  151  git branch production
+  152  git branch
+  153  vi Puppetfile 
+  154  git remote -v
+  155  git push origin master
+  156  git push origin production
+  157  git commit -a
+  158  git commit
+  159  git branch
+  160  git push origin production
+  161  git push 
+  162  git remote -v
+  163  cd /root/repos/control-repo-production/
+  164  ls
+  165  git branch
+  166  git status
+  167  git 
+  168  git rev-parse --show-toplevel
+  169  cd ..
+  170  git rev-parse --show-toplevel
+  171  cd /root/repos/control-repo-production/
+  172  git rev-parse --show-toplevel
+  173  cd /etc/puppetlabs/code/environments/production/
+  174  ls
+  175  git rev-parse --show-toplevel
+  176  git remote -v
+  177  cd /root/repos/control-repo-production/
+  178  ls
+  179  git remote -v
+  180  git push origin master
+  181  git branch
+  182  git push origin production
+  183  cd /etc/puppetlabs/code/environments/production/
+  184  ls
+  185  git branch
+  186  git origin
+  187  git remote -v
+  188  git push origin master
+  189  git push origin production
+  190  git branch
+  191  git checkout branch
+  192  git checkout production
+  193  cd ..
+  194  ls
+  195  cd ..
+  196  ls
+  197  cd ..
+  198  ls
+  199  cd puppetserver/
+  200  ls
+  201  cd ssh/
+  202  ls
+  203  r10k deploy display --fetch
+  204  puppet agent -t
+  205  r10k deploy display --fetch
+  206  git branch
+  207  cd /etc/puppetlabs/code/environments/
+  208  git branch
+  209  cd production/
+  210  git branch
+  211  git push origin master
+  212  git push origin production
+  213  git branch
+  214  git commit
+  215  git push origin production
+  216  r10k deploy display --fetch
+  217  git branch production
+  218  puppet agent -t
+  219  r10k deploy display --fetch
+  220  git branch
+  221  git push origin production
+  222  git push origin master
+  223  git remote -v
+  224  git rev-parse --show-toplevel
+  225  git branch
+  226  cd ..
+  227  mv production/ /root /production1
+  228  mv production/ /root/production1
+  229  ls
+  230  git branch
+  231  puppet-code deploy master --wait
+  232  history
+  233  history | grep puppet-acces
+  234  puppet-access login --service-url https://puppetmaster.uk.centricaplc.com:4433/rbac-api --lifetime 365
+  235  puppet-code deploy master --wait
+  236  ls
+  237  cd production/
+  238  git branch
+  239  cd ..
+  240  git branch
+  241  git rev-parse --show-toplevel
+  242  r10k deploy display --fetch
+  243  dir
+  244  cd production/
+  245  ls
+  246  cd ..
+  247  ls
+  248  pwd
+  249  puppet-code deploy master --wait
+  250  ls
+  251  cd master/
+  252  ls
+  253  cd /root/
+  254  ls
+  255  cd repos/
+  256  ls
+  257  cd control-repo-production/
+  258  ls
+  259  git status
+  260  git branch
+  261  git push origin master
+  262  cd /etc/puppetlabs/code/environments/
+  263  ls
+  264  cd master/
+  265  ls
+  266  git branch
+  267  git status
+  268  git remote -v
+  269  git branch production
+  270  git checkout production
+  271  git push origin master
+  272  git push origin production
+  273  git commit
+  274  git remote -v
+  275  cd /root/repos/control-repo-production/
+  276  ls
+  277  git branch
+  278  git origin
+  279  git remote
+  280  git remote -v
+  281  git status
+  282  git push
+  283  git rev-parse --show-toplevel
+  284  git remote -v
+  285  git remote set-url git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  286  git remote set-url --add git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  287  git remote set-url --add origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  288  git remote -v
+  289  git remote set-url --push origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  290  git remote -v
+  291  git remote set-url --add origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  292  git remote -v
+  293  git remote --delete https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  294  git remote set-url --delete origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  295  git remote -v
+  296  git push origin master
+  297  cat /etc/puppetlabs/puppetserver/ssh/id_rsa.pub 
+  298  cat /etc/puppetlabs/puppetserver/ssh/id_rsa
+  299  pwd
+  300  git branch
+  301  git checkout master
+  302  git remote -v
+  303  git push master
+  304  git push origin master
+  305  git remote get-url origin
+  306  git remote -v
+  307  git push origin master
+  308  git remote -v
+  309  git remote set-url --add origin https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  310  git remote -v
+  311  git remote set-url --push origin https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  312  git remote -v
+  313  git remote set-url --delete origin git@github.com/mibrahimmalik/puppetlab-control-repo.git
+  314  git remote -v
+  315  git remote set-url --delete origin git@github.com/mibrahimmalik/puppetlab-control-repo.git
+  316  git remote -v
+  317  git remote set-url --add origin https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  318  git remote -v
+  319  git remote set-url --add origin https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  320  git remote -v
+  321  git remote set-url --push origin https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  322  git remote -v
+  323  git push origin master
+  324  git push origin production
+  325  history | grep git parse
+  326  history | grep "git parse"
+  327  history | grep 'git parse'
+  328  history | grep 'git rev'
+  329  git rev-parse --show-toplevel
+  330  pwd
+  331  git branch
+  332  git checkout production
+  333  git push origin production
+  334  git remote -v
+  335  git remote set-url --delete https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  336  git remote set-url --delete origin https://github.com:mibrahimmalik/puppetlab-control-repo.git
+  337  git remote -v
+  338  git remote set-url --delete origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  339  git remote -v
+  340  git remote
+  341  git remote origin
+  342  git remote origin remove origin
+  343  git remote set-url ---push origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  344  git remote set-url --push origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  345  git remote -v
+  346  git remote set-url --add origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  347  git remote -v
+  348  git remote set-url --add origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  349  git remote -v
+  350  git remote set-url origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  351  git remote -v
+  352  git remote set-url origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  353  git remote set-url --delete origin git@github.com/mibrahimmalik/puppetlab-control-repo.git
+  354  git remote -v
+  355  git remote set-url --delete origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  356  git remote -v
+  357  git push origin master
+  358  git push origin production
+  359  history | grep puppet-code
+  360  puppet-code deploy --all --wait
+  361  history | grep puppet-access
+  362  puppet-access login --service-url https://puppetmaster.uk.centricaplc.com:4433/rbac-api --lifetime 365
+  363  puppet-code deploy --all --wait
+  364  cd /etc/puppetlabs/code/environments/
+  365  ls
+  366  cd production/
+  367  ls
+  368  cd ..
+  369  pwd
+  370  cd production/
+  371  ls
+  372  cat Puppetfile 
+  373  puppet-code deploy --all --wait
+  374  cat Puppetfile 
+  375  puppet-code deploy --all --wait
+  376  cat Puppetfile 
+  377  puppet agent -t
+  378  puppet-access login --service-url https://puppetmaster.uk.centricaplc.com:4433/rbac-api --lifetime 365d
+  379  puppet-code deploy --all --wait
+  380  ls /etc/puppetlabs/code/environments/
+  381  pwd
+  382  cd /root/repos/control-repo-production/
+  383  ls
+  384  git branch
+  385  git branch development
+  386  git checkout development
+  387  git branch
+  388  puppet module install puppetlabs/windows
+  389  puppet module install puppetlabs-acl
+  390  ls
+  391  cd site-modules/
+  392  ls
+  393  pwd
+  394  git commit -a
+  395  puppet branch
+  396  cd ..
+  397  puppet branch
+  398  cd ..
+  399  cd control-repo-production/
+  400  git branch
+  401  git commit -a
+  402  git push origin development
+  403  puppet-code deploy --all --wait
+  404  ls /etc/puppetlabs/code/environments/
+  405  ssh-keygen -t rsa -b 4096 -C "mibrahimmalik@gmail.com"
+  406  cat .ssh/id_rsa.pub 
+  407  git remote -v
+  408  cd /root/repos/control-repo-production/
+  409  git remote -v
+  410  git status
+  411  git branch 
+  412  git push origin development
+  413  git remote set-url 
+  414  git remote set-url --add origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  415  git remote -v
+  416  git remote set-url --push origin git@github.com:mibrahimmalik/puppetlab-control-repo.git
+  417  git remote -v
+  418  git remote set-url --delete origin https://github.com/mibrahimmalik/puppetlab-control-repo.git
+  419  git remote -v
+  420  git push origin development
+  421  history | grep 'git rev'
+  422  git rev-parse --show-toplevel
+  423  dfdfdf
+  424  ls
+  425  puppet
+  426  puppet help
+  427  ls
+  428  cd ..
+  429  ls
+  430  cd control-repo-production/
+  431  ls
+  432  cd site-modules/
+  433  ls
+  434  cd ..
+  435  git branch 
+  436  ls /etc/puppetlabs/code/environments/development/
+  437  ls
+  438  pwd
+  439  mkdir modules
+  440  cd modules/
+  441  ls
+  442  puppet module generate mib-ssh
+  443  puppet help module generate
+  444  yum install pdk
+  445  cd /root/
+  446  rpm -Uvh https://yum.puppet.com/puppet-tools-release-el-7.noarch.rpm
+  447  yum install pdk
+  448  cd repos/control-repo-production/modules/
+  449  pdk new module mib-ssh
+  450  ls
+  451  cd ssh
+  452  ls
+  453  cat metadata.json 
+  454  git branch 
+  455  ls
+  456  cd files/
+  457  ls
+  458  cd ..
+  459  ls /etc/puppetlabs/code/environments/development/
+  460  ls /etc/puppetlabs/code/environments/development/manifests/
+  461  cat /etc/puppetlabs/code/environments/development/manifests/site.pp 
+  462  cat /etc/puppetlabs/code/environments/development/environment.conf 
+  463  cat /etc/puppetlabs/code/environments/development/Puppetfile 
+  464  cd ..
+  465  pwd
+  466  ls
+  467  pdk new module nginx
+  468  ls
+  469  cd nginx/
+  470  ls
+  471  cd manifests/
+  472  ls
+  473  cd ..
+  474  ls
+  475  pdk new class install
+  476  ls
+  477  cd manifests/
+  478  ls
+  479  cat install.pp 
+  480  vi install.pp 
+  481  puppet parser validate install.pp 
+  482  cat install.pp 
+  483  cd ..
+  484  pdk new class nginx
+  485  vi manifests/init.pp 
+  486  cd ..
+  487  ls
+  488  cd manifests/
+  489  ls
+  490  cat site.pp 
+  491  vi site.pp 
+  492  git add .
+  493  cd ..
+  494  git add .
+  495  git commit -a
+  496  ls
+  497  git add .
+  498  git commit
+  499  git push origin development
+  500  ls
+  501  cd modules/
+  502  ls
+  503  git add .
+  504  git commit -a
+  505  cd ..
+  506  git commit -am 
+  507  git push origin development
+  508  git help
+  509  git branch
+  510  git status
+  511  cd modules/
+  512  git status
+  513  ls
+  514  cd nginx/
+  515  git status
+  516  cd ..
+  517  git help
+  518  git init
+  519  git add .
+  520  git commit
+  521  git branch
+  522  git push origin development
+  523  git add
+  524  git add .?
+  525  git add .
+  526  dir
+  527  ls
+  528  ls -lrt
+  529  git commit
+  530  git status
+  531  git add help
+  532  git help
+  533  ls -lrt
+  534  git add modules
+  535  git add modules -f
+  536  git commit
+  537  git status
+  538  git push origin development
+  539  puppet-code deploy --all --wait
+  540  ls /etc/puppetlabs/code/environments/development/
+  541  ls /etc/puppetlabs/code/environments/development/modules/
+  542  ls /etc/puppetlabs/code/environments/development/modules/nginx/
+  543  ls /etc/puppetlabs/code/environments/development/modules/nginx/manifests/
+  544  $(dmidecode | grep UUID)
+  545  dmidecode | grep UUID
+  546  cat /etc/puppetlabs/puppet/puppet.conf 
+  547  cd repos/control-repo-production/
+  548  ls
+  549  cd modules/
+  550  ls
+  551  cd nginx/
+  552  ls
+  553  cd manifests/
+  554  ls
+  555  cat init.pp 
+  556  cat install.pp 
+  557  cd ..
+  558  ls
+  559  cat data/common.yaml 
+  560  cat manifests/init.pp 
+  561  cat manifests/install.pp 
+  562  cd ..
+  563  ls
+  564  cd ..
+  565  ls
+  566  cat manifests/site.pp 
+  567  ls
+  568  cd modules/nginx/
+  569  ls
+  570  cd manifests/
+  571  ls
+  572  pwd
+  573  cd ..
+  574  ls
+  575  cd manifests/
+  576  ls
+  577  vi site.pp 
+  578  cd..
+  579  ls
+  580  cd ..
+  581  ls
+  582  cd modules/nginx/manifests/
+  583  ls
+  584  vi init.pp 
+  585  cat init.pp 
+  586  cat install.pp 
+  587  ls
+  588  pwd
+  589  cd ..
+  590  ls
+  591  pwd
+  592  pdk new module httpd
+  593  ls
+  594  cd httpd/
+  595  ls
+  596  cd manifests/
+  597  ls
+  598  pdk new class install
+  599  cd ..
+  600  ls
+  601  pdk new class install
+  602  pdk new class configure
+  603  pdk new class start
+  604  cd manifests/
+  605  ls
+  606  ls -lrt
+  607  cat install.pp
+  608  cat configure.pp 
+  609  cat start.pp 
+  610  vi install.pp 
+  611  vi configure.pp 
+  612  vi start.pp 
+  613  puppet parser validate install.pp
+  614  puppet parser validate configure.pp 
+  615  puppet parser validate start.pp 
+  616  vi init.pp
+  617  puppet parser validate init.pp 
+  618  cd ..
+  619  pwd
+  620  cd ..
+  621  pwd
+  622  cd ..
+  623  ls
+  624  cd manifests/
+  625  ls
+  626  vi site.pp 
+  627  puppet parser validate site.pp 
+  628  git branch
+  629  cd ..
+  630  pwd
+  631  ls
+  632  git add modules/
+  633  git status
+  634  git commit -a
+  635  git push origin development
+  636  git add modules/
+  637  git commit -a
+  638  git branch
+  639  git add modules/httpd/
+  640  git commit -a -m
+  641  git commit -a
+  642  git add modules/httpd/
+  643  git commit -a
+  644  git add modules/httpd/ .
+  645  git add modules/httpd/*
+  646  git add modules/*
+  647  git add modules/* -f
+  648  git commit -a
+  649  git push origin development
+  650  puppet-code deploy --all --wait
+  651  ls /etc/puppetlabs/code/environments/development/modules/
+  652  factor
+  653  ls
+  654  cd repos/
+  655  ls
+  656  cd control-repo-production/
+  657  ls
+  658  cd ..
+  659  ls
+  660  git branch
+  661  cd control-repo-production/
+  662  ls
+  663  git branch
+  664  history
+  665  history > /root/history.txt
